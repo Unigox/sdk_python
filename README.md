@@ -13,7 +13,7 @@ pip install requests eth-account web3
 ## Usage
 
 ```python
-from sdk import authorize_crypto_transfer
+from partner_authorize_crypto_transfer_sdk import authorize_crypto_transfer
 
 result = authorize_crypto_transfer(
     api_url="https://api-snc2e.ondigitalocean.app",
@@ -26,6 +26,7 @@ print(result)
 
 ## Files
 
+- `partner_authorize_crypto_transfer_sdk.py`: canonical helper file (CLI + programmatic usage).
 - `sdk.py`: partner crypto transfer authorization flow helper.
 - `requirements.txt`: runtime Python dependency list.
 
