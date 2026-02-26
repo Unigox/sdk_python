@@ -1,16 +1,12 @@
-# Unigox Python SDK
+# Unigox SDKs
 
-This repository currently contains the Unigox partner helper SDK for crypto transfer authorization.
+This repository contains helper SDK files for Unigox partner crypto transfer authorization.
 
-## Install
-
-Install dependencies into your environment:
+## Python
 
 ```bash
 pip install requests eth-account web3
 ```
-
-## Usage
 
 ```python
 from partner_authorize_crypto_transfer_sdk import authorize_crypto_transfer
@@ -24,12 +20,28 @@ result = authorize_crypto_transfer(
 print(result)
 ```
 
+## JavaScript
+
+```bash
+npm install ethers
+```
+
+```javascript
+const { authorizeCryptoTransfer } = require('./partner_authorize_crypto_transfer_sdk');
+
+authorizeCryptoTransfer({
+  apiUrl: 'https://api-snc2e.ondigitalocean.app',
+  apiKey: '<YOUR_PARTNER_API_KEY>',
+  orderId: '<ORDER_ID>',
+  privateKey: '<PARTNER_WALLET_PRIVATE_KEY>',
+})
+  .then(console.log)
+  .catch(console.error);
+```
+
 ## Files
 
-- `partner_authorize_crypto_transfer_sdk.py`: canonical helper file (CLI + programmatic usage).
-- `sdk.py`: partner crypto transfer authorization flow helper.
+- `partner_authorize_crypto_transfer_sdk.py`: canonical Python helper file.
+- `partner_authorize_crypto_transfer_sdk.js`: canonical JavaScript helper file.
+- `sdk.py`: legacy compatibility alias file.
 - `requirements.txt`: runtime Python dependency list.
-
-## OpenAPI
-
-The API spec references this SDK in the SDK section.
