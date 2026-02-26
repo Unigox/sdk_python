@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unigox-sdk"
+version = "0.0.1"
+description = "Unigox Partner SDK (crypto transfer authorization helper)"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["requests", "eth-account", "web3"]
